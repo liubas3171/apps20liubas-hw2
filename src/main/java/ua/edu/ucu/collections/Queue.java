@@ -14,7 +14,7 @@ public class Queue {
     }
 
     Object dequeue() {
-        Object res= peek();
+        Object res = peek();
         list = list.removeLast();
         return res;
     }

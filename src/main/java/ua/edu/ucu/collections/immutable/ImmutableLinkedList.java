@@ -1,6 +1,5 @@
 package ua.edu.ucu.collections.immutable;
 
-import sun.security.ec.point.ProjectivePoint;
 
 public final class ImmutableLinkedList implements ImmutableList {
     private Node head;
