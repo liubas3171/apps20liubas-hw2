@@ -37,13 +37,15 @@ public class ImmutableArrayList implements ImmutableList {
     }
 
     private ImmutableList myAdd(int index, Object[] c) {
-        c = c.clone();
-        Object[] newArray = new Object[this.size() + c.length];
-        if (index >= 0) System.arraycopy(array, 0, newArray, 0, index);
-        System.arraycopy(c, 0, newArray, index, c.length);
+        Object[] newC = c.clone();
+        Object[] newArray = new Object[this.size() + newC.length];
+        if (index >= 0) {
+            System.arraycopy(array, 0, newArray, 0, index);
+        }
+        System.arraycopy(newC, 0, newArray, index, newC.length);
 
         for (int i = 0; i < this.size() - index; i++) {
-            newArray[index + c.length + i] = array[index + i];
+            newArray[index + newC.length + i] = array[index + i];
         }
 
         return new ImmutableArrayList(newArray);
