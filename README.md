@@ -10,9 +10,13 @@ ImmutableList newImmutableList = immutableList.add(“abc”);
 		
 При реалізації інтерфейсу ImmutableList класами ImmutableLinkedList або ImmutableArrayList, методи інтерфейсу що повертають ImmutableList мають повертати колекції конкретного типу (тобто ImmutableLinkedList або ImmutableArrayList)
 
+
 ImmutableLinkedList, додатково до методів з п.1 повинен мати наступні методи:
+
 public ImmutableLinkedList addFirst(Object e) - додає елемент у початок зв'язаного списку
+
 public ImmutableLinkedList addLast(Object e) - додає елемент у кінець зв'язаного списку
+
 public Object getFirst()
 public Object getLast()
 public ImmutableLinkedList removeFirst() - видаляє перший елемент
